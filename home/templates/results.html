@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CV Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Extracted Information</h2>
+    <ul>
+        {% for item in data %}
+            <li><strong>Filename:</strong> {{ item.filename }} | <strong>Emails:</strong> {{ item.emails }} | <strong>Phones:</strong> {{ item.phones }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'download_excel' %}" class="btn btn-success">Download as Excel</a>
+</div>
+</body>
+</html>
